@@ -23,7 +23,6 @@ const favorite_sec = document.querySelector(".favorite");
 const api = "https://api.themoviedb.org/3/movie/popular?api_key=9bcbc45abf6ade087e9836c07de1005a";
 const photoUrl = "https://image.tmdb.org/t/p/w500";
 
-// --- وظيفة مساعدة للتحقق من المفضلة ---
 function isFavorite(id) {
     const favs = JSON.parse(localStorage.getItem("myFavorites")) || [];
     return favs.includes(id.toString());
