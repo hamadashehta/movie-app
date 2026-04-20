@@ -29,18 +29,7 @@ function isFavorite(id) {
     return favs.includes(id.toString());
 }
 
-// // // --- تخزين الإيميل ---
-// function emailLocalStorige() {
-//     sign_btn.addEventListener("click", function () {
-//         if (input.value !== "") {
-//             window.localStorage.setItem("email", input.value);
-//             // انقل المستخدم للقسم اللي بعده لما يدخل الايميل
-//             sec1.classList.add("d-none");
-//             sec2.classList.remove("d-none");
-//         }
-//     });
-// }
-// emailLocalStorige();
+
 
 function showTrindingPage() {
     skip_btn.addEventListener("click", () => {
@@ -50,7 +39,7 @@ function showTrindingPage() {
 }
 showTrindingPage();
 
-// --- الفيلم التريند ---
+
 async function trindingFilm() {
     let respons = await fetch(api);
     let jsoneResponse = await respons.json();
@@ -85,7 +74,7 @@ async function trindingFilm() {
 }
 trindingFilm();
 
-// --- رسم كل الأفلام ---
+
 async function allmoves() {
     let movie = await fetch(api);
     let moveresult = await movie.json();
@@ -111,7 +100,7 @@ function displayMovies(moviesList) {
 }
 allmoves();
 
-// --- تفاصيل الفيلم ---
+
 async function showDetails(id) {
     const detailsUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=9bcbc45abf6ade087e9836c07de1005a`;
     try {
@@ -134,15 +123,15 @@ async function showDetails(id) {
     } catch (error) { console.error(error); }
 }
 
-// --- الأحداث (Event Listeners) ---
 
-// 1. الضغط على الكارت أو القلب
+
+
 divCard.addEventListener("click", (e) => {
     const favIcon = e.target.closest(".fav-icon");
     const card = e.target.closest(".movie-card");
 
     if (favIcon) {
-        // لو داس على القلب
+       
         const movieId = favIcon.getAttribute("data-id");
         let favs = JSON.parse(localStorage.getItem("myFavorites")) || [];
 
@@ -155,12 +144,10 @@ divCard.addEventListener("click", (e) => {
         }
         localStorage.setItem("myFavorites", JSON.stringify(favs));
     } else if (card) {
-        // لو داس على الكارت نفسه
         showDetails(card.getAttribute("data-id"));
     }
 });
 
-// 2. البحث
 searchInput.addEventListener("input", async () => {
     let word = searchInput.value.trim();
     if (word !== "") {
@@ -173,16 +160,16 @@ searchInput.addEventListener("input", async () => {
     }
 });
 
-// 3. التبديل للمفضلة
+
 favorite_sec.addEventListener("click", async () => {
     const favIds = JSON.parse(localStorage.getItem("myFavorites")) || [];
     home_sec.classList.remove("act");
     favorite_sec.classList.add("act");
-    sec4.classList.add("d-none"); // تأكد إن صفحة التفاصيل مقفولة
+    sec4.classList.add("d-none");
     sec3.classList.remove("d-none");
 
     if (favIds.length === 0) {
-        divCard.innerHTML = `<h2 class="text-white text-center mt-5">مفيش أفلام في المفضلة يا حب</h2>`;
+        divCard.innerHTML = `<h2 class="text-white text-center mt-5">مفيش أفلام في المفضلة يا رايس </h2>`;
         return;
     }
 
@@ -197,7 +184,7 @@ favorite_sec.addEventListener("click", async () => {
     displayMovies(favMoviesData);
 });
 
-// 4. الرجوع للهوم
+
 home_sec.addEventListener("click", () => {
     favorite_sec.classList.remove("act");
     home_sec.classList.add("act");
