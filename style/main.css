@@ -1,0 +1,283 @@
+html{
+  font-family: "Mulish", sans-serif;
+}
+/* start sec one */
+.hero {
+    color: white;
+    height: 100vh;
+    background-image: url("image/Untitled design.png");
+    background-size: cover;
+    /* 
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center; */
+}
+.input-email{
+    opacity: .6;
+    background-color: black;
+    color: white;
+    border: none;
+    min-height: 48px;
+    border-radius: 3px;
+    padding: 10px;
+}
+.red {
+    background-color: red;
+    height: 53px;
+    border-radius: 16px;
+    border: none;
+    padding: 10px;
+    color:white
+}
+@media (max-width: 770px) {
+ button {
+    padding: 6px 10px;
+    font-size: 14px;
+    min-width: 50px;
+  }
+}
+/* .sign {
+    background-color: red;
+    height: 53px;
+    border-radius: 16px;
+    border: none;
+    padding: 10px;
+    color:white
+} */
+.logo{
+height:62px;
+width: 150px;
+}
+nav{
+background-color: #000000f2
+}
+/* end sec one */
+
+/* start sec tow */
+.sec2{
+height: 100vh;
+}
+
+.sec2{
+    background-color: #0f0f0f;
+}
+/* p{
+  position: absolute;
+    color: white;
+    bottom: 236px;
+     z-index: 1;
+    left: 276px;
+}
+span{
+    position: absolute;
+    color: white;
+} */
+
+.exit-btn{
+    background-color: red;
+    width: 30px;
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin: 5px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+       transition: transform .5s ease-in-out;
+}
+.exit-btn:hover{
+        transform: scale(1.2);
+}
+.trend {
+    background-color: #530404;
+    max-width: 500px;
+    border-radius: 17px;
+    box-shadow: -9px 10px 8px -2.5px rgb(141, 69, 38, 0.7);
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+}
+.trend:hover{
+    transform: scale(1.1);
+}
+
+.trend svg {
+    color: red;
+    font-size: 20px;
+    top: 22px;
+    left: 29px;
+}
+.movie-img {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+h5{
+    color:white;
+}
+
+/* end sec tow */
+
+.home-logo{
+height:62px;
+width: 150px;
+
+}
+.nav-ul{
+    cursor: pointer;
+}
+.nav-ul li:hover{
+color: red;
+
+}
+.act{
+color: red;
+
+}
+.nav-icon p{
+    right: 57px;
+    bottom: 18px;
+}
+nav{
+    height: 90px;
+}
+.search {
+    width: 166px;
+    border-radius: 24px;
+    opacity: .8;
+}
+.sec3{
+    background-color:#0F0F0F;
+    min-height: 99vh;
+    width: 100%;
+}
+.card{
+    transition: transform .5s ease-in-out;
+}
+.card:hover{
+cursor: pointer;
+transform: scale(.9);
+}
+.card svg:hover{
+    transform: scale(2);
+}
+.card img{
+border-radius: 5px;
+}
+.card svg {
+    color: red;
+    font-size: 20px;
+    top: 8px;
+    left: 15px;
+
+}
+@media(max-width:770px){
+.card svg {
+    font-size: 35px;
+}
+}
+.card{
+    background-color: #1C1C1C;
+    border-radius: 5px;
+}
+
+
+.sec4{
+    background-color: #0f0f0f;
+   min-height: 100vh;
+}
+
+.photosDetals {
+position: relative;
+margin-top:20px;
+padding: 0;
+width: 100%;
+height: auto;
+display: block;
+}
+.cover{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.personalPhoto0{
+position: absolute;
+bottom: 20px;
+left: 20px;
+z-index: 10;
+margin: 20px;
+}
+.personalPhoto{
+    width: 200px;
+    border: 4px solid #0f0f0f;
+     border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+@media(max-width: 915px) {
+    .contt{
+        margin-top: 20px;
+    }
+    .cover {
+        display: none;
+    }
+    .personalPhoto0 {
+        position: static; /* نلغي الـ absolute في الموبايل */
+        text-align: center;
+    margin: 20px;
+    }
+    .personalPhoto {
+        width: 150px;
+        opacity: 1;
+        margin: 20px;
+    }
+}
+
+    .ddddd{
+        padding: 10px;
+        display: grid;
+        grid-template-columns:max-content 1fr;
+        justify-items: end;
+        gap: 20px;
+        align-items: center;
+        margin-left: 200px;
+    }
+    .ddddd .p{
+        padding: 5px 15px;
+        background-color: #530404;
+        border-radius:5px;
+        margin: 0;
+        font-weight: bolder;
+        width: fit-content;
+        align-self:flex-start ;
+    }
+
+    .test{
+        padding: 10px;
+        font-weight: bolder;
+        margin: 0;
+    }
+@media (max-width: 915px) {
+    .ddddd {
+        display: flex !important; /* جبر العنصر يكون فليكس */
+        flex-direction: column !important; /* تحت بعض */
+        align-items: flex-start !important; /* يروحوا شمال */
+        text-align: left !important; /* الكلام يبدأ من الشمال */
+        padding: 10px !important;
+        margin-left: 0 !important; /* شيل أي مسافة كنت عاملها للكمبيوتر */
+    }
+
+    .ddddd .p {
+        align-self: flex-start !important; /* المربع الأحمر يروح شمال وميتمطش */
+        width: fit-content !important;
+        margin-bottom: 5px !important;
+    }
+
+    .ddddd .test, .ddddd span, .ddddd div {
+        text-align: left !important;
+        margin-left: 0 !important;
+        width: 100% !important; /* عشان يضمن إن الكلام واخد راحته بس بيبدأ من الشمال */
+    }
+}
